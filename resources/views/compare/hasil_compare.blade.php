@@ -17,7 +17,7 @@
 <form method="POST" class="contact100-form validate-form" action="/compare_c" enctype="multipart/form-data">
     @csrf
         <br><br>
-        <center><h2>Pilih banyaknya data yang ingin dibandigkan :</h2></center>
+        <center><h2>Pilih banyaknya data yang ingin dibandingkan :</h2></center>
         <div class="tengah">
             <a style="font-size: 30px" type="button" class="btn btn-secondary" href="compare_2">2</a>
             <a style="font-size: 30px" type="button" class="btn btn-secondary" href="compare_3">3</a>
@@ -52,7 +52,7 @@
                 ?>
             
             {{-- <td><a type="button"; data-toogle="modal"; data-target="{{$x_rank[$k-1][0]}}" > ? </a> </td> --}}
-            <td><button style="background-color:white; border: none; color:white; text-decoration: none; display: inline-block;" type="button" data-toggle="modal" data-target="#{{$x_rank[$k-1][0]}}">
+            <td><button style="background-color:white; border: none; color:white; text-decoration: none; display: inline-block;" type="button" data-toggle="modal" data-target="#{{str_replace(' ','',$x_rank[$k-1][0])}}">
                 <img src="{{URL::to('/')}}/images/logo/icon_question.jpg" width="30px" height="30px" class="" alt="Img_Logo">
               </button></td>
             
@@ -69,19 +69,19 @@
   <?php
             if (count($x_rank) == 2){
                 // echo "ranking 1 adalah ".$x_rank[0][0];
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupkan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
+                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
             " dan disusul oleh ras kucing ".$vtot_r[1][0]);
             }
             elseif (count($x_rank) == 3){
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupkan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
+                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
             " dan disusul oleh ras kucing ".$vtot_r[1][0].", dan ".$vtot_r[2][0]);
             }
             elseif (count($x_rank) == 4){
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupkan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
+                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
             " dan disusul oleh ras kucing ".$vtot_r[1][0].", ".$vtot_r[2][0].", dan ".$vtot_r[3][0]);
             }
             elseif (count($x_rank) == 5){
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupkan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
+                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
             " dan disusul oleh ras kucing ".$vtot_r[1][0].", ".$vtot_r[2][0].", ".$vtot_r[3][0].", dan ".$vtot_r[4][0]);
             }
             ?>
@@ -94,8 +94,9 @@
   
  @for($i=0;$i<count($x_rank);$i++)
 
+
 <!-- Modal -->
-<div class="modal fade" id="{{$x_rank[$i][0]}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="{{str_replace(' ','',$x_rank[$i][0])}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg modal-dialog-centered " role="document">
 	<div class="modal-content">
 

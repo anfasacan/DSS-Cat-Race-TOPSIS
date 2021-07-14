@@ -152,7 +152,7 @@ for($i=0; $i < count($x); $i++){
 
 <table>
   <tr>
-    <th>Jenis Kucing</th>
+    <th>Ras Kucing</th>
     @foreach ($bobot as $nama_bbt)
     <th>{{$nama_bbt->nama_bobot}}</th> 
     @endforeach

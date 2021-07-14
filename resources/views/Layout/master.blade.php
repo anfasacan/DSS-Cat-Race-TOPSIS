@@ -30,6 +30,17 @@
   <link rel="shortcut icon" href="{{asset('admin/images/Small-logo.png')}}" />
 </head>
 
+<style>
+  .nav_section .custom_nav2 .custom_nav-container .navbar-nav .nav-item .nav-link {
+padding: 10px 30px;
+color: #ffffff;
+text-align: center;
+position: relative;
+font-size: 25px;
+}
+
+</style>
+
 <body class="sub_page">
 
   <div class="hero_area">

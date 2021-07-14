@@ -29,7 +29,17 @@
     {{-- logo --}}
     <link rel="shortcut icon" href="{{asset('admin/images/Small-logo.png')}}" />
   </head>
+  
+  <style>
+    .nav_section .custom_nav2 .custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 10px 30px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+}
 
+</style>
 <body>
   <div class="hero_area">
     <!-- header section strats -->
@@ -135,7 +145,7 @@
             <h5>
               {{$home->jenis_kucing}}
             </h5>
-            <a  type="button" data-toggle="modal" data-target="#{{$home->jenis_kucing}}">
+            <a  type="button" data-toggle="modal" data-target="#{{str_replace(' ','',$home->jenis_kucing)}}">
               info
             </a>
           </div>
@@ -150,13 +160,13 @@
     
 
   <!-- Modal -->
-<div class="modal fade" id="{{$modal->jenis_kucing}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="{{str_replace(' ','',$modal->jenis_kucing)}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg modal-dialog-centered " role="document">
 	<div class="modal-content">
 
 		<div class="modal-header">
   
-            <h1  style="margin-left : 30%" id="exampleModalLongTitle">{{$modal->jenis_kucing}}</h1>
+            <h1  style="margin-left : 30%" id="exampleModalLongTitle"> {{$modal->jenis_kucing}}</h1>
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>

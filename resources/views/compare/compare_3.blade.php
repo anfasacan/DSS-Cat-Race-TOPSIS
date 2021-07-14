@@ -14,7 +14,7 @@
 <form method="POST" class="contact100-form validate-form" action="/compare_c_3" enctype="multipart/form-data">
     @csrf
     <br><br>
-    <center><h2>Pilih banyaknya data yang ingin dibandigkan :</h2></center>
+    <center><h2>Pilih banyaknya data yang ingin dibandingkan :</h2></center>
 
     {{-- <div style="margin-top:20px; margin-left :40%; margin-right:10%"> --}}
         <div class="tengah">
@@ -24,7 +24,7 @@
             <a style="font-size: 30px" type="button" class="btn btn-secondary" href="compare_5">5</a>
        <br>
         <br>
-        <span ><h2>Masukan 3 Jenis Kucing untuk dibandigkan</h2></span>
+        <span ><h2>Masukan 3 Ras Kucing untuk dibandingkan</h2></span>
         <div>
           <select class="form-control form-control-lg" name="kucing1" style="">
                 <option disabled selected value style="display: :none">Pilih</option>

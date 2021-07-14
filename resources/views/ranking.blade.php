@@ -3,12 +3,17 @@
 
 @section('ranking')
 <br>
+<center>
+<h5><b>
+    Menu Peringkat ini merupakan perbandingan seluruh ras kucing yang ada dalam website choose your cat    
+</b></h5>
+</center>
 <div class="table-responsive">
 <table id="myTable" class="table" style="margin-top:20px; width :80%; margin-left :10%; margin-right:10%">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Peringkat</th>
-        <th scope="col">Jenis Kucing</th>
+        <th scope="col">Ras Kucing</th>
         <th scope="col">Preference</th>
         
       </tr>

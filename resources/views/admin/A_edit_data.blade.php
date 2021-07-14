@@ -17,7 +17,7 @@
           </div>
 
           <div class="form-group">
-            <label for="jenis_kucing">Jenis Kucing</label>
+            <label for="jenis_kucing">Ras Kucing</label>
             <input type="text" class="form-control" id="jenis_kucing" placeholder="jenis_kucing" name="jenis_kucing" value="{{$data->jenis_kucing}}">
           </div>
     

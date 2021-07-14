@@ -14,7 +14,7 @@
 <form method="POST" class="contact100-form validate-form" action="/compare_c" enctype="multipart/form-data">
     @csrf
     <br><br>
-    <center><h2>Pilih banyaknya data yang ingin dibandigkan :</h2></center>
+    <center><h2>Pilih banyaknya data yang ingin dibandingkan :</h2></center>
         <div class="tengah">
         <a style="font-size: 30px" type="button" class="btn btn-secondary" href="compare_2">2</a>
         <a style="font-size: 30px" type="button" class="btn btn-secondary" href="compare_3">3</a>

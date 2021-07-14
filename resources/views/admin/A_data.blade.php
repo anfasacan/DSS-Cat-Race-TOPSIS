@@ -24,7 +24,7 @@
                       id  
                   </th> 
                   <th>
-                      Jenis Kucing  
+                      Ras Kucing  
                   </th>
                   <th>
                     Foto  

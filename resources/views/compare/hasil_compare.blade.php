@@ -32,7 +32,7 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">Peringkat</th>
-        <th scope="col">Jenis Kucing</th>
+        <th scope="col">Ras Kucing</th>
         <th scope="col">Preference</th>
         <th scope="col">Informasi</th>
       </tr>

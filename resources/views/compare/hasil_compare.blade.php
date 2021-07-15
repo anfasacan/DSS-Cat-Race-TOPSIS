@@ -67,28 +67,29 @@
   </table>
 
   <?php
+// Berdasarkan perbandingan ras kucing yang telah dilakukan dengan menggunakan metode TOPSIS, maka ras kucing yang terbaik untuk diadopsi adalah yang memiliki nilai preference tertinggi, yaitu ras kucing...... disusul ras kucing... kemudian ras kucing.... lalu ras kucing dan terakhir ras kucing.....
             if (count($x_rank) == 2){
                 // echo "ranking 1 adalah ".$x_rank[0][0];
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
-            " dan disusul oleh ras kucing ".$vtot_r[1][0]);
+                $keterangan = ("Berdasarkan perbandingan ras kucing yang telah dilakukan dengan menggunakan metode TOPSIS, maka ras kucing yang terbaik untuk diadopsi adalah yang memiliki nilai preference tertinggi, yaitu ras kucing "
+                .$vtot_r[0][0].", dan disusul ras kucing ".$vtot_r[1][0].".");
             }
             elseif (count($x_rank) == 3){
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
-            " dan disusul oleh ras kucing ".$vtot_r[1][0].", dan ".$vtot_r[2][0]);
+                $keterangan = ("Berdasarkan perbandingan ras kucing yang telah dilakukan dengan menggunakan metode TOPSIS, maka ras kucing yang terbaik untuk diadopsi adalah yang memiliki nilai preference tertinggi, yaitu ras kucing "
+                .$vtot_r[0][0].", disusul ras kucing ".$vtot_r[1][0].", dan terakhir ras kucing ".$vtot_r[2][0].".");
             }
             elseif (count($x_rank) == 4){
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
-            " dan disusul oleh ras kucing ".$vtot_r[1][0].", ".$vtot_r[2][0].", dan ".$vtot_r[3][0]);
+                $keterangan = ("Berdasarkan perbandingan ras kucing yang telah dilakukan dengan menggunakan metode TOPSIS, maka ras kucing yang terbaik untuk diadopsi adalah yang memiliki nilai preference tertinggi, yaitu ras kucing "
+                .$vtot_r[0][0].", disusul ras kucing ".$vtot_r[1][0].", kemudian ras kucing ".$vtot_r[2][0].", dan terakhir ras kucing ".$vtot_r[3][0].".");
             }
             elseif (count($x_rank) == 5){
-                $keterangan = ("Jadi untuk ras kucing terbaik untuk diadopsi menurut website ini menggunakan metode TOPSIS, merupakan ras kucing ".$vtot_r[0][0]." dikarenkan memiliki nilai preference terbesar yaitu ".round($vtot_r[0][1],2).
-            " dan disusul oleh ras kucing ".$vtot_r[1][0].", ".$vtot_r[2][0].", ".$vtot_r[3][0].", dan ".$vtot_r[4][0]);
+                $keterangan = ("Berdasarkan perbandingan ras kucing yang telah dilakukan dengan menggunakan metode TOPSIS, maka ras kucing yang terbaik untuk diadopsi adalah yang memiliki nilai preference tertinggi, yaitu ras kucing "
+                .$vtot_r[0][0].", disusul ras kucing ".$vtot_r[1][0].", kemudian ras kucing ".$vtot_r[2][0].", lalu ras kucing ".$vtot_r[3][0].", dan terakhir ras kucing ".$vtot_r[4][0].".");
             }
             ?>
             <br>
             <br>
     <div class="kanankiri">
-        <h3><b>Keterangan :</b></h3>
+        <h3><b>Kesimpulan :</b></h3>
         <h4>{{$keterangan}}</h4>
     </div>
   
